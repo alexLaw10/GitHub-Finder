@@ -26,6 +26,9 @@ export default defineConfig({
     coverage: {
       reportsDirectory: '../../coverage/packages/design-system',
       provider: 'v8',
+      reporter: ['text', 'html', 'lcov'],
+      include: ['src/**/*.{ts,tsx}'],
+      exclude: ['src/**/*.{spec,test}.{ts,tsx}', 'src/test-setup.ts'],
     },
   },
 });

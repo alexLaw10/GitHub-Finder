@@ -27,6 +27,9 @@ export default defineConfig({
     coverage: {
       reportsDirectory: '../../coverage/apps/github-finder',
       provider: 'v8',
+      reporter: ['text', 'html', 'lcov'],
+      include: ['src/**/*.{ts,tsx}'],
+      exclude: ['src/**/*.{spec,test}.{ts,tsx}', 'src/test-setup.ts', 'src/test-utils/**'],
     },
   },
 });

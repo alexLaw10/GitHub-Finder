@@ -2,6 +2,12 @@
 
 Aplicação client-side que consulta a API pública do GitHub para buscar um usuário, ver seus detalhes e navegar pelos seus repositórios. Organizada como monorepo [Nx](https://nx.dev/).
 
+## Demo
+
+🔗 **[http://github-finder-alexlaw10.s3-website-us-east-1.amazonaws.com/](http://github-finder-alexlaw10.s3-website-us-east-1.amazonaws.com/)**
+
+> Hospedado em S3 (site estático). Nota: é servido via HTTP simples (sem HTTPS/CDN) — CloudFront pode ser adicionado depois na frente do mesmo bucket sem precisar refazer o deploy.
+
 ## Stack
 
 - [Nx](https://nx.dev/) — orquestração do monorepo (build, typecheck, cache)
@@ -116,3 +122,4 @@ npx nx graph                       # visualizar o grafo de dependências entre a
 - A API do GitHub tem um limite de 60 requisições/hora para chamadas não autenticadas. Erros de usuário/repositório não encontrado (404) e de limite excedido (403) são tratados com mensagens amigáveis na interface (`getApiErrorMessage` em `packages/api-client`).
 - Não há autenticação nem chaves de API envolvidas — todas as chamadas são feitas diretamente ao endpoint público `https://api.github.com`.
 - O Nx Cloud (cache remoto/CI) **não está conectado** neste workspace por padrão.
+- A aplicação está hospedada em S3 (`github-finder-alexlaw10`, região `us-east-1`) como site estático, com fallback de rota (`error_document: index.html`) pro React Router funcionar em URLs diretas como `/octocat`.
