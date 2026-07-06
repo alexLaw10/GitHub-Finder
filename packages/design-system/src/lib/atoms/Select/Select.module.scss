@@ -1,0 +1,18 @@
+@use '../../../styles/variables' as v;
+
+.select {
+  display: inline-block;
+  width: auto;
+  padding: v.$spacing-2 v.$spacing-3;
+  font-size: 1rem;
+  color: v.$color-text;
+  background-color: v.$color-white;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-md;
+
+  &:focus {
+    outline: 0;
+    border-color: v.$color-primary;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  }
+}

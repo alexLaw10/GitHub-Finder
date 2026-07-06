@@ -1,0 +1,28 @@
+@use '../../../styles/variables' as v;
+
+.badge {
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: v.$radius-sm;
+
+  &--primary {
+    color: v.$color-white;
+    background-color: v.$color-primary;
+  }
+
+  &--light {
+    color: v.$color-text;
+    background-color: v.$color-light-bg;
+    border: 1px solid v.$color-border;
+  }
+
+  &--pill {
+    border-radius: v.$radius-pill;
+  }
+}

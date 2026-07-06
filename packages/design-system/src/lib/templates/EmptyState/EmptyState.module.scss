@@ -1,0 +1,17 @@
+@use '../../../styles/variables' as v;
+
+.empty-state {
+  padding: v.$spacing-5 0;
+  color: v.$color-text-muted;
+  text-align: center;
+
+  &__title {
+    margin-bottom: v.$spacing-1;
+    font-weight: 600;
+  }
+
+  &__description {
+    margin-bottom: 0;
+    font-size: v.$font-size-sm;
+  }
+}

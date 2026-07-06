@@ -1,0 +1,9 @@
+@use '../../styles/variables' as v;
+
+.repo-detail-card {
+  &__badges {
+    display: flex;
+    gap: v.$spacing-2;
+    margin-bottom: v.$spacing-3;
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@github-finder/app",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-router-dom": "6.30.3",
+    "@tanstack/react-query": "^5.101.2",
+    "@github-finder/api-client": "*",
+    "@github-finder/types": "*",
+    "@github-finder/design-system": "*"
+  }
+}

@@ -1,0 +1,9 @@
+@use '../../styles/variables' as v;
+
+.search {
+  &__title {
+    margin-bottom: v.$spacing-4;
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+}

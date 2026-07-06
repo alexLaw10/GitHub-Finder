@@ -1,0 +1,43 @@
+@use '../../styles/variables' as v;
+@use '../../styles/mixins' as m;
+
+.user-card {
+  margin-bottom: v.$spacing-4;
+
+  &__layout {
+    display: flex;
+    flex-direction: column;
+
+    @include m.respond-md {
+      flex-direction: row;
+    }
+  }
+
+  &__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: v.$spacing-3;
+
+    @include m.respond-md {
+      flex: 0 0 25%;
+    }
+  }
+
+  &__body {
+    flex: 1;
+  }
+
+  &__username {
+    color: v.$color-text-muted;
+  }
+
+  &__stats {
+    display: flex;
+    gap: v.$spacing-4;
+  }
+
+  &__link {
+    margin-top: v.$spacing-3;
+  }
+}

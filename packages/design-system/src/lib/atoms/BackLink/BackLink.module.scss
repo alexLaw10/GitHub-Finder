@@ -1,0 +1,15 @@
+@use '../../../styles/variables' as v;
+
+.back-link {
+  display: inline-block;
+  padding: 0;
+  margin-bottom: v.$spacing-3;
+  color: v.$color-primary;
+  text-decoration: underline;
+  background: none;
+  border: none;
+
+  &:hover {
+    color: v.$color-primary-hover;
+  }
+}

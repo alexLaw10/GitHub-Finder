@@ -1,0 +1,64 @@
+@use '../../../styles/variables' as v;
+@use '../../../styles/mixins' as m;
+
+.button {
+  display: inline-block;
+  padding: v.$spacing-2 v.$spacing-3;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: v.$radius-md;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  @include m.focus-ring;
+
+  &--primary {
+    color: v.$color-white;
+    background-color: v.$color-primary;
+    border-color: v.$color-primary;
+
+    &:hover {
+      background-color: v.$color-primary-hover;
+      border-color: v.$color-primary-hover;
+    }
+  }
+
+  &--outline-primary {
+    color: v.$color-primary;
+    background-color: transparent;
+    border-color: v.$color-primary;
+
+    &:hover {
+      color: v.$color-white;
+      background-color: v.$color-primary;
+    }
+  }
+
+  &--link {
+    padding-left: 0;
+    color: v.$color-primary;
+    background-color: transparent;
+    border-color: transparent;
+    text-decoration: underline;
+
+    &:hover {
+      color: v.$color-primary-hover;
+    }
+  }
+
+  &--sm {
+    padding: v.$spacing-1 v.$spacing-2;
+    font-size: v.$font-size-sm;
+    border-radius: v.$radius-sm;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.65;
+  }
+}

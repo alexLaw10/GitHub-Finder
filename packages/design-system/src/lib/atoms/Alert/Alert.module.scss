@@ -1,0 +1,21 @@
+@use '../../../styles/variables' as v;
+
+.alert {
+  padding: v.$spacing-3;
+  margin: v.$spacing-3 0;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: v.$radius-md;
+
+  &--danger {
+    color: v.$color-danger-text;
+    background-color: v.$color-danger-bg;
+    border-color: v.$color-danger-border;
+  }
+
+  &--info {
+    color: v.$color-text;
+    background-color: v.$color-light-bg;
+    border-color: v.$color-border;
+  }
+}

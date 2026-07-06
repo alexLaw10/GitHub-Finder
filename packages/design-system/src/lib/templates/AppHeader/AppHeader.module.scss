@@ -1,0 +1,33 @@
+@use '../../../styles/variables' as v;
+
+.app-header {
+  display: flex;
+  align-items: center;
+  padding: v.$spacing-3 v.$spacing-4;
+  background-color: v.$color-white;
+  border-bottom: 1px solid v.$color-border;
+
+  &__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: v.$spacing-2;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: v.$color-text;
+    text-decoration: none;
+  }
+
+  &__mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: v.$radius-md;
+    background-color: v.$color-primary;
+    color: v.$color-white;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+}

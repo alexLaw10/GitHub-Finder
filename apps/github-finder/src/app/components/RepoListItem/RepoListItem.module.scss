@@ -1,0 +1,47 @@
+@use '../../styles/variables' as v;
+
+.repo-list-item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &:first-child .repo-list-item__link {
+    border-top: 1px solid v.$color-border;
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
+  }
+
+  &:last-child .repo-list-item__link {
+    border-bottom-left-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+  }
+
+  &__link {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: v.$spacing-3;
+    padding: v.$spacing-3;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid v.$color-border;
+    border-top: none;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.03);
+    }
+  }
+
+  &__name {
+    font-weight: 600;
+  }
+
+  &__description {
+    color: v.$color-text-muted;
+    font-size: v.$font-size-sm;
+  }
+
+  &__language {
+    margin-top: v.$spacing-1;
+  }
+}

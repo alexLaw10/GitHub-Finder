@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "files": [],
+  "references": [
+    {
+      "path": "./packages/types"
+    },
+    {
+      "path": "./packages/api-client"
+    },
+    {
+      "path": "./apps/github-finder"
+    },
+    {
+      "path": "./packages/design-system"
+    }
+  ]
+}

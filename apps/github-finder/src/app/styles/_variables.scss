@@ -1,0 +1,13 @@
+// Mirrors packages/design-system/src/styles/_variables.scss so app-level
+// components can follow the same BEM/SCSS tokens without crossing package boundaries.
+$color-text-muted: #6c757d;
+$color-border: #dee2e6;
+
+$spacing-1: 0.25rem;
+$spacing-2: 0.5rem;
+$spacing-3: 1rem;
+$spacing-4: 1.5rem;
+
+$font-size-sm: 0.875rem;
+
+$breakpoint-md: 768px;

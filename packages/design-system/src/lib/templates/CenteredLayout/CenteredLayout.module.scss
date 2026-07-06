@@ -1,0 +1,13 @@
+@use '../../../styles/variables' as v;
+@use '../../../styles/mixins' as m;
+
+.centered-layout {
+  @include m.flex-center(column);
+  flex: 1;
+  min-height: 0;
+  padding: v.$spacing-4 0;
+
+  @include m.respond-md {
+    padding: v.$spacing-5 0;
+  }
+}
